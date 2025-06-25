@@ -54,7 +54,7 @@ const YouTubeLyricsPlayer = ({ params }) => {
         }
         
         // Search YouTube for the song
-        const query = `${data.trackName} ${data.artistName}`;
+        const query = `${data.artistName} - ${data.trackName}  ( Lyrics )`;
         const ytResponse = await fetch(
           `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}&maxResults=1`
         );
